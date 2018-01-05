@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-hello<% helloController.hello();%>
+hello<% helloController.hello("same", "same");%>
 </body>
 </html>
