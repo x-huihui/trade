@@ -1,6 +1,6 @@
 package com.om.blank.trade.controller;
 
-import com.om.blank.trade.dao.HelloMapper;
+import com.om.blank.trade.db.dao.userMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,8 +26,8 @@ public class helloController {
             SqlSessionFactory sqlSessionFactory =
                     new SqlSessionFactoryBuilder().build(inputStream);
             SqlSession sqlSession = sqlSessionFactory.openSession();
-            HelloMapper mapper = sqlSession.getMapper(HelloMapper.class);
-            System.out.print(mapper.hello());
+            userMapper mapper = sqlSession.getMapper(userMapper.class);
+            System.out.print(mapper.selectByPrimaryKey(1L));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper url="file:///D:\IdeaProjects\trade\trade-webapp\src\main\java\com\om\blank\trade\dao\hello.xml"/>
+        <mapper resource="com/om/blank/trade/db/dao/xml/userMapper.xml"/>
     </mappers>
 </configuration>

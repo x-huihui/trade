@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <classPathEntry location="D:\IdeaProjects\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar" />
 
-    <context id="2Tables" targetRuntime="MyBatis3">
+    <context id="MysqlTables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/nev"
                         userId="root"
@@ -17,16 +17,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.om.blank.trade.test.model" targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <javaModelGenerator targetPackage="com.om.blank.trade.db.model" targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.om.blank.trade.test.xml"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <sqlMapGenerator targetPackage="com.om.blank.trade.db.dao.xml"  targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.test.dao"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.db.dao"  targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
