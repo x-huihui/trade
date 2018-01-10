@@ -1,4 +1,4 @@
-<%@ page import="com.om.blank.trade.Controller.helloController" %><%--
+<%@ page import="com.om.blank.trade.controller.helloController" %><%--
   Created by IntelliJ IDEA.
   User: KeKe
   Date: 2017/11/26
