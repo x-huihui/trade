@@ -12,6 +12,6 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
     }
 
     protected String[] getServletMappings() {
-        return new String[]{"/hello/c"};
+        return new String[]{"/hello/*"};
     }
 }

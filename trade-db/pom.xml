@@ -26,20 +26,11 @@
                 <directory>${project.build.sourceDirectory}/com/om/blank/trade/db/dao/xml</directory>
                 <targetPath>com/om/blank/trade/db/dao/xml</targetPath>
             </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <resources>
-                        <resource>
-                            <directory>${project.basedir}/src/main/resources</directory>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
