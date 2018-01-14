@@ -1,44 +1,32 @@
 package com.om.blank.trade.controller;
 
-import com.om.blank.trade.db.dao.userMapper;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by KeKe on 2017/11/26.
  */
+@Controller
+@RequestMapping("/hello")
 public class helloController {
-    public static void main(String[] args) {
-        try {
-            String resource = "mybatis.xml";
-            InputStream inputStream = null;
-            inputStream = Resources.getResourceAsStream(resource);
-            SqlSessionFactory sqlSessionFactory =
-                    new SqlSessionFactoryBuilder().build(inputStream);
-            SqlSession sqlSession = sqlSessionFactory.openSession();
-            userMapper mapper = sqlSession.getMapper(userMapper.class);
-            System.out.print(mapper.selectByPrimaryKey(1L));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void hello(String userName, String password) {
+    @GetMapping("/c")
+    @ResponseBody
+    public String hello(Model model) {
         Logger logger = LoggerFactory.getLogger(helloController.class);
         logger.info("hello world");
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userName, password);
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken("xiaoming", "xiaoming");
         usernamePasswordToken.getPrincipal();
         usernamePasswordToken.getCredentials();
         Subject subject = SecurityUtils.getSubject();
         subject.login(usernamePasswordToken);
+        return "hello c";
     }
 }

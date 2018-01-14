@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-hello<% helloController.hello("same", "same");%>
+hello <a href="/trade/hello/c">滴滴答</a>
 </body>
 </html>

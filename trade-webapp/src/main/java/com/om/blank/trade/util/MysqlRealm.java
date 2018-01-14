@@ -2,10 +2,8 @@ package com.om.blank.trade.util;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.AuthenticatingRealm;
-import org.apache.shiro.realm.Realm;
-import org.apache.shiro.subject.PrincipalCollection;
 
-public class myRealm extends AuthenticatingRealm {
+public class MysqlRealm extends AuthenticatingRealm {
 
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) authenticationToken;

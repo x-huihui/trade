@@ -17,16 +17,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.om.blank.trade.db.model" targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
+        <javaModelGenerator targetPackage="com.om.blank.trade.db.model" targetProject="D:\IdeaProjects\trade\trade-db\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.om.blank.trade.db.dao.xml"  targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
+        <sqlMapGenerator targetPackage="com.om.blank.trade.db.dao.xml"  targetProject="D:\IdeaProjects\trade\trade-db\src\main\java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.db.dao"  targetProject="D:\IdeaProjects\trade\trade-common-db\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.db.dao"  targetProject="D:\IdeaProjects\trade\trade-db\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
