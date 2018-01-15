@@ -13,11 +13,6 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>com.om.blank</groupId>
-            <artifactId>trade-db</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <!--logging start-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -64,9 +59,31 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
         <!--spring end-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>${project.build.sourceDirectory}/com/om/blank/trade/mapper/xml</directory>
+                <targetPath>com/om/blank/trade/mapper/xml</targetPath>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.5</version>
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>

@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/om/blank/trade/db/dao/xml/userMapper.xml"/>
+        <mapper resource="com/om/blank/trade/mapper/xml/userMapper.xml"/>
     </mappers>
 </configuration>
