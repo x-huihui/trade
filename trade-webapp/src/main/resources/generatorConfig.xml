@@ -17,22 +17,26 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.om.blank.trade.model" targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <javaModelGenerator targetPackage="com.om.blank.trade.mybatis.model" targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.om.blank.trade.mapper.xml"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <sqlMapGenerator targetPackage="com.om.blank.trade.mybatis.mapper.xml"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.mapper"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.om.blank.trade.mybatis.mapper"  targetProject="D:\IdeaProjects\trade\trade-webapp\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName="euc_user" domainObjectName="user" >
+        <table tableName="euc_user" domainObjectName="User" >
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="user_id" sqlStatement="MySql" identity="true" />
+        </table>
+        <table tableName="euc_department" domainObjectName="Department" >
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="department_id" sqlStatement="MySql" identity="true" />
         </table>
 
     </context>

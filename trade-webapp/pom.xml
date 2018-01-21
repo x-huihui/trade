@@ -49,6 +49,12 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+        </dependency>
+
         <!--spring start-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -80,8 +86,8 @@
     <build>
         <resources>
             <resource>
-                <directory>${project.build.sourceDirectory}/com/om/blank/trade/mapper/xml</directory>
-                <targetPath>com/om/blank/trade/mapper/xml</targetPath>
+                <directory>${project.build.sourceDirectory}/com/om/blank/trade/mybatis/mapper/xml</directory>
+                <targetPath>com/om/blank/trade/mybatis/mapper/xml</targetPath>
             </resource>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
