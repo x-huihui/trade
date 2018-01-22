@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>hello world</title>
+    <link rel="stylesheet" href="css/common/normalize.css">
+    <link rel="stylesheet" href="css/common/bootstrap.min.css">
+    <style>
+        form{
+            margin-top: 100%;
+        }
+        form input{
+            margin-top: 5px;
+        }
+    </style>
 </head>
-<body>
-<form action="/trade/hello/c" method="get">
-    用户名：<input name="account">
-    密码：<input name="password">
-    <input type="submit" value="提交">
-</form>
+<body class="container">
+<div class="row">
+    <div class="col-xs-3 col-xs-offset-5">
+        <form action="/trade/hello/c" class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <input placeholder="账号" class="col-xs-12" id="account" name="account">
+                </div>
+                <div class="row">
+                    <input placeholder="密码" class="col-xs-12" id="password" name="password">
+                </div>
+                <div class="row">
+                    <input class="col-xs-3 col-xs-offset-2" type="reset" value="重置">
+                    <input class="col-xs-3 col-xs-offset-2" type="submit" value="提交">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
