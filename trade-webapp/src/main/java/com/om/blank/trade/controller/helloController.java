@@ -5,8 +5,10 @@ package com.om.blank.trade.controller;
  * Created by KeKe on 2017/11/26.
  */
 
+import com.om.blank.trade.mybatis.base.BaseExample;
+import com.om.blank.trade.mybatis.base.BaseMapper;
 import com.om.blank.trade.mybatis.mapper.UserMapper;
-import com.om.blank.trade.mybatis.model.UserExample;
+import com.om.blank.trade.mybatis.model.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/hello/")

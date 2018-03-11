@@ -6,7 +6,7 @@
 <generatorConfiguration>
 
     <context id="MysqlTables" targetRuntime="MyBatis3">
-        <plugin type = "com.om.blank.tools.mybatis.plugins.ExamplePlugins"/>
+        <plugin type = "com.om.blank.tools.mybatisPlugin.ExamplePlugins"/>
         <plugin type = "org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
         <plugin type = "org.mybatis.generator.plugins.ToStringPlugin"/>
 

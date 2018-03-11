@@ -1,8 +1,9 @@
 package com.om.blank.trade.util;
 
+import com.om.blank.trade.mybatis.base.BaseExample;
+import com.om.blank.trade.mybatis.base.BaseMapper;
 import com.om.blank.trade.mybatis.mapper.UserMapper;
 import com.om.blank.trade.mybatis.model.User;
-import com.om.blank.trade.mybatis.model.UserExample;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.AuthenticatingRealm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class MysqlRealm extends AuthenticatingRealm {
 
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) authenticationToken;
-        UserExample example = new UserExample();
-        example.or().andAccountEqualTo(usernamePasswordToken.getUsername());
+        BaseExample example = userMapper.getExample();
+        example.or().andPropertyEqualTo("account",usernamePasswordToken.getUsername());
         List<User> users = userMapper.selectByExample(example);
         User user;
         if (users != null && users.size() > 0){
