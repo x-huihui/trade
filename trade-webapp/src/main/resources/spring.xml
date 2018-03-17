@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="com.om.blank.trade.controller"/>
+    <context:component-scan base-package="com.om.blank.trade"/>
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
     <context:property-placeholder location="classpath:mysql.properties"/>
@@ -34,8 +34,8 @@
         <property name="loginUrl" value="/index.html"/>
         <property name="filterChainDefinitions">
             <value>
-                /hello/c = anon
-                /hello/** = authc
+                /public/** = anon
+                /** = authc
             </value>
         </property>
     </bean>
